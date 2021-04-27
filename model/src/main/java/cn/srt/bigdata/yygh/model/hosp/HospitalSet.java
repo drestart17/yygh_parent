@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.annotation.TableName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
+import lombok.Getter;
 
 /**
  * <p>
@@ -15,6 +16,7 @@ import lombok.Data;
  * @author qy
  */
 @Data
+@Getter
 @ApiModel(description = "医院设置")
 @TableName("hospital_set")
 public class HospitalSet extends BaseEntity {

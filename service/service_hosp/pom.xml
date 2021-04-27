@@ -9,7 +9,28 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>service_hosp</artifactId>
+    <version>1.0</version>
+    <artifactId>service-hosp</artifactId>
+    <packaging>jar</packaging>
+    <name>service-hosp</name>
+    <description>service-hosp</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>cn.srt.bigdata</groupId>
+            <artifactId>service_util</artifactId>
+            <version>1.0</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>service-hosp</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
