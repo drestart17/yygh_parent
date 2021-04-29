@@ -1,5 +1,6 @@
 package cn.srt.bigdata.yygh.hosp.controller;
 
+import cn.srt.bigdata.common.exception.YyghException;
 import cn.srt.bigdata.common.result.Result;
 import cn.srt.bigdata.common.utils.MD5;
 import cn.srt.bigdata.yygh.hosp.service.HospitalSetService;
@@ -94,7 +95,11 @@ public class HospitalSetController {
     public Result getHospSet(@PathVariable Long id) {
 
         //模拟异常
-        int a = 1/0;
+        try {
+            int a = 1/0;
+        }catch (Exception e) {
+            throw new YyghException("/zero 失败",201);
+        }
 
         HospitalSet hospitalSet = hospitalSetService.getById(id);
 
